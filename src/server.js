@@ -8,8 +8,9 @@ connectDB();
 
 const app = express();
 app.use(cors({
-    origin: '*',
-    credentials:true
+  origin: 'https://note-frontend-l7oy.onrender.com', // frontend URL
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization']
 }));
 app.use(express.json())
 
